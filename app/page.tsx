@@ -3,10 +3,9 @@
 import type React from "react"
 
 import { useState, useEffect, useRef } from "react"
-import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { MapPin, Calendar, Heart, Award, Users, Sparkles, GraduationCap, Star } from "lucide-react"
+import { Heart, Award, Users, Sparkles, GraduationCap, Star } from "lucide-react"
 
 export default function DentistPage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -95,13 +94,6 @@ export default function DentistPage() {
               >
                 Credentials
               </a>
-              <a
-                href="#contact"
-                onClick={(e) => scrollToSection(e, "contact")}
-                className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
-              >
-                Contact
-              </a>
             </div>
           </div>
         </div>
@@ -130,13 +122,6 @@ export default function DentistPage() {
                   </div>
                 ))}
               </div>
-
-              <Button size="lg" className="text-base px-8" onClick={(e) => scrollToSection(e, "contact")}>
-                <span className="flex items-center gap-2">
-                  Get in Touch
-                  <Calendar className="w-5 h-5" />
-                </span>
-              </Button>
             </div>
 
             <div className="order-1 md:order-2">
@@ -360,58 +345,6 @@ export default function DentistPage() {
               </p>
             </Card>
           </div>
-        </div>
-      </section>
-
-      <section id="contact" className="py-20 px-4">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-6 text-sm">
-              Get in Touch
-            </Badge>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-balance">Let's connect</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Currently practicing at Little Bytes Pediatric Dentistry in Palo Alto
-            </p>
-          </div>
-
-          <Card className="p-12 bg-gradient-to-br from-muted/50 to-muted/20">
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div className="text-center">
-                <div className="p-4 rounded-full bg-primary/10 w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-8 h-8 text-primary" />
-                </div>
-                <p className="font-bold mb-2">Location</p>
-                <p className="text-sm text-muted-foreground">Palo Alto, CA</p>
-                <p className="text-sm text-muted-foreground">Bay Area</p>
-              </div>
-
-              <div className="text-center">
-                <div className="p-4 rounded-full bg-primary/10 w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-primary" />
-                </div>
-                <p className="font-bold mb-2">Practice</p>
-                <p className="text-sm text-muted-foreground">Little Bytes</p>
-                <p className="text-sm text-muted-foreground">Pediatric Dentistry</p>
-              </div>
-
-              <div className="text-center">
-                <div className="p-4 rounded-full bg-primary/10 w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Calendar className="w-8 h-8 text-primary" />
-                </div>
-                <p className="font-bold mb-2">Schedule</p>
-                <p className="text-sm text-muted-foreground">By Appointment</p>
-                <p className="text-sm text-muted-foreground">Monday - Friday</p>
-              </div>
-            </div>
-
-            <div className="text-center pt-8 border-t border-border">
-              <p className="text-muted-foreground mb-6">Contact the practice to schedule your visit</p>
-              <Button size="lg" className="text-lg px-10">
-                Schedule Consultation
-              </Button>
-            </div>
-          </Card>
         </div>
       </section>
 
